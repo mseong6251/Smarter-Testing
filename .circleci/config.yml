@@ -14,7 +14,7 @@ executors:
 jobs:
   test:
     executor: node-executor
-    parallelism: 2
+    parallelism: 6
     steps:
       - checkout
       - run:
