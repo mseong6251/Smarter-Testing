@@ -31,7 +31,29 @@ jobs:
       - store_test_results:
           path: ./reports/
 
+  testSplit:
+    executor: node-executor
+    parallelism: 6
+    steps:
+      - checkout
+      - run:
+          name: Install npm dependencies
+          command: npm install
+      - run:
+          name: Run Jest tests with splitting
+          command: |
+            npx jest --listTests \
+              | circleci tests run \
+                  --command="JEST_JUNIT_ADD_FILE_ATTRIBUTE=true xargs npx jest --ci --runInBand --reporters=default --reporters=jest-junit --" \
+                  --verbose \
+                  --split-by=timings
+          environment:
+            JEST_JUNIT_OUTPUT_DIR: ./reports/
+      - store_test_results:
+          path: ./reports/
+
 workflows:
   testing:
     jobs:
       - test
+      - testSplit
