@@ -22,8 +22,8 @@ describe("Clear All Button Tests", () => {
     fireEvent.change(secondInput, { target: { value: "5" } });
     fireEvent.click(clearAllButton);
 
-    expect(firstInput).toHaveValue("");
-    expect(secondInput).toHaveValue("");
+    expect(firstInput.value).toBeFalsy();
+    expect(secondInput.value).toBeFalsy();
   });
 
   test("Clear All button clears result", () => {
@@ -99,8 +99,8 @@ describe("Clear All Button Tests", () => {
 
     fireEvent.click(clearAllButton);
 
-    expect(firstInput).toHaveValue("");
-    expect(secondInput).toHaveValue("");
+    expect(firstInput.value).toBeFalsy();
+    expect(secondInput.value).toBeFalsy();
     expect(screen.getByText("No calculations yet")).toBeInTheDocument();
   });
 });

@@ -28,8 +28,8 @@ describe("Clear History Button Tests", () => {
     fireEvent.click(clearHistoryButton);
 
     expect(screen.getByText("No calculations yet")).toBeInTheDocument();
-    expect(firstInput).toHaveValue("10");
-    expect(secondInput).toHaveValue("5");
+    expect(firstInput.value).toBe("10");
+    expect(secondInput.value).toBe("5");
   });
 
   test("Clear History button clears last result", () => {
