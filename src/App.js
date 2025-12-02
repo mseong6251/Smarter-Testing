@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 
-///test
+///Testing
 
 function App() {
   const [num1, setNum1] = useState("");

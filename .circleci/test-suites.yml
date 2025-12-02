@@ -1,0 +1,20 @@
+# .circleci/test-suites.yml
+---
+name: ci tests
+discover: npx jest --listTests
+run: JEST_JUNIT_ADD_FILE_ATTRIBUTE="true" JEST_JUNIT_OUTPUT_FILE="<< outputs.junit >>" npx jest --runInBand --reporters=jest-junit --bail << test.atoms >>
+analysis: |
+  npx jest --runInBand \
+       --silent \
+       --coverage \
+       --coverageProvider=v8 \
+       --coverageReporters=lcovonly \
+       --coverage-directory="$(dirname << outputs.lcov >>)" \
+       --bail \
+       << test.atoms >> \
+       && cat "$(dirname << outputs.lcov >>)"/*.info > << outputs.lcov >>
+outputs:
+  junit: test-reports/tests.xml
+options:
+  test-impact-analysis: true
+  test-analysis-duration: 1

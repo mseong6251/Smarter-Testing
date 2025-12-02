@@ -51,6 +51,23 @@ jobs:
       - store_test_results:
           path: ./reports/
 
+  testSmarterTesting:
+    executor: node-executor
+    parallelism: 6
+    steps:
+      - checkout
+      - run:
+          name: Install npm dependencies
+          command: npm install
+      - run:
+          name: Run Jest tests with Smarter Testing
+          command: |
+            circleci run testsuite "ci tests"
+          # environment:
+          #   JEST_JUNIT_OUTPUT_DIR: ./reports/
+      - store_test_results:
+          path: ./reports/
+
 workflows:
   testing:
     jobs:
