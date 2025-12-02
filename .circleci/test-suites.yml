@@ -1,6 +1,0 @@
-name: ci tests
-runner: jest # Predefined runner with defaults
-outputs:
-  junit: results/tests.xml # Test results location
-options:
-  adaptive-testing: true # Enable test impact analysis

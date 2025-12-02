@@ -12,9 +12,9 @@ executors:
     working_directory: ~/project
 
 jobs:
-  test-react-functionality:
+  test:
     executor: node-executor
-    parallelism: 4
+    parallelism: 2
     steps:
       - checkout
       - run:
@@ -23,37 +23,15 @@ jobs:
             npm install
             echo "✅ All dependencies installed!"
       - run:
-          name: Run React tests
-          command: circleci run testsuite "ci tests"
+          name: Run Jest tests
+          command: npx jest --ci --runInBand --reporters=default --reporters=jest-junit
+          environment:
+            JEST_JUNIT_OUTPUT_DIR: ./reports/
+            JEST_JUNIT_ADD_FILE_ATTRIBUTE: "true"
       - store_test_results:
-          path: test-results
-  test-react-functionality-optimized:
-    executor: node-executor
-    parallelism: 4
-    steps:
-      - checkout
-      - run:
-          name: Install npm dependencies
-          command: |
-            npm install
-            echo "✅ All dependencies installed!"
-      - run:
-          name: Run React tests with optimization
-          command: |
-            echo "🚀 Running tests with new CircleCI test optimization..."
-            circleci tests run  test-suite "react-tests" 
-            echo "✅ Optimized React tests completed"
-      - store_test_results:
-          path: test-results
-      - store_artifacts:
-          path: test-results
-          destination: test-results
-      - store_artifacts:
-          path: coverage
-          destination: coverage
+          path: ./reports/
 
 workflows:
-  test:
+  testing:
     jobs:
-      - test-react-functionality
-      - test-react-functionality-optimized
+      - test
