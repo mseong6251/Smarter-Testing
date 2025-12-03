@@ -64,7 +64,7 @@ jobs:
           command: |
             circleci run testsuite "ci tests"
       - store_test_results:
-          path: ./reports/
+          path: test-reports/
 
 workflows:
   testing:
