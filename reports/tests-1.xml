@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="41" failures="0" errors="0" time="1.217">
+  <testsuite name="Add Button Tests" errors="0" failures="0" skipped="0" timestamp="2025-12-04T15:09:33" time="0.384" tests="6">
+    <testcase classname="Add Button Tests Add button is rendered" name="Add Button Tests Add button is rendered" time="0.024" file="testApp/addButton.test.js">
+    </testcase>
+    <testcase classname="Add Button Tests Add button performs addition correctly" name="Add Button Tests Add button performs addition correctly" time="0.011" file="testApp/addButton.test.js">
+    </testcase>
+    <testcase classname="Add Button Tests Add button handles negative numbers" name="Add Button Tests Add button handles negative numbers" time="0.003" file="testApp/addButton.test.js">
+    </testcase>
+    <testcase classname="Add Button Tests Add button handles decimal numbers" name="Add Button Tests Add button handles decimal numbers" time="0.003" file="testApp/addButton.test.js">
+    </testcase>
+    <testcase classname="Add Button Tests Add button shows error for invalid input" name="Add Button Tests Add button shows error for invalid input" time="0.002" file="testApp/addButton.test.js">
+    </testcase>
+    <testcase classname="Add Button Tests Add button adds entry to history" name="Add Button Tests Add button adds entry to history" time="0.002" file="testApp/addButton.test.js">
+    </testcase>
+  </testsuite>
+  <testsuite name="Divide Button Tests" errors="0" failures="0" skipped="0" timestamp="2025-12-04T15:09:34" time="0.119" tests="8">
+    <testcase classname="Divide Button Tests Divide button is rendered" name="Divide Button Tests Divide button is rendered" time="0.004" file="testApp/divideButton.test.js">
+    </testcase>
+    <testcase classname="Divide Button Tests Divide button performs division correctly" name="Divide Button Tests Divide button performs division correctly" time="0.002" file="testApp/divideButton.test.js">
+    </testcase>
+    <testcase classname="Divide Button Tests Divide button shows error when dividing by zero" name="Divide Button Tests Divide button shows error when dividing by zero" time="0.002" file="testApp/divideButton.test.js">
+    </testcase>
+    <testcase classname="Divide Button Tests Divide button handles decimal results" name="Divide Button Tests Divide button handles decimal results" time="0.001" file="testApp/divideButton.test.js">
+    </testcase>
+    <testcase classname="Divide Button Tests Divide button handles negative numbers" name="Divide Button Tests Divide button handles negative numbers" time="0.002" file="testApp/divideButton.test.js">
+    </testcase>
+    <testcase classname="Divide Button Tests Divide button handles decimal inputs" name="Divide Button Tests Divide button handles decimal inputs" time="0.003" file="testApp/divideButton.test.js">
+    </testcase>
+    <testcase classname="Divide Button Tests Divide button shows error for invalid input" name="Divide Button Tests Divide button shows error for invalid input" time="0.003" file="testApp/divideButton.test.js">
+    </testcase>
+    <testcase classname="Divide Button Tests Divide button adds entry to history" name="Divide Button Tests Divide button adds entry to history" time="0.003" file="testApp/divideButton.test.js">
+    </testcase>
+  </testsuite>
+  <testsuite name="Clear History Button Tests" errors="0" failures="0" skipped="0" timestamp="2025-12-04T15:09:34" time="0.096" tests="6">
+    <testcase classname="Clear History Button Tests Clear History button is rendered" name="Clear History Button Tests Clear History button is rendered" time="0.003" file="testApp/clearHistoryButton.test.js">
+    </testcase>
+    <testcase classname="Clear History Button Tests Clear History button clears history but keeps inputs" name="Clear History Button Tests Clear History button clears history but keeps inputs" time="0.003" file="testApp/clearHistoryButton.test.js">
+    </testcase>
+    <testcase classname="Clear History Button Tests Clear History button clears last result" name="Clear History Button Tests Clear History button clears last result" time="0.003" file="testApp/clearHistoryButton.test.js">
+    </testcase>
+    <testcase classname="Clear History Button Tests Clear History button does not clear current result" name="Clear History Button Tests Clear History button does not clear current result" time="0.002" file="testApp/clearHistoryButton.test.js">
+    </testcase>
+    <testcase classname="Clear History Button Tests Clear History button works with multiple history entries" name="Clear History Button Tests Clear History button works with multiple history entries" time="0.005" file="testApp/clearHistoryButton.test.js">
+    </testcase>
+    <testcase classname="Clear History Button Tests Clear History button does nothing when history is empty" name="Clear History Button Tests Clear History button does nothing when history is empty" time="0.001" file="testApp/clearHistoryButton.test.js">
+    </testcase>
+  </testsuite>
+  <testsuite name="Power Button Tests" errors="0" failures="0" skipped="0" timestamp="2025-12-04T15:09:34" time="0.094" tests="8">
+    <testcase classname="Power Button Tests Power button is rendered" name="Power Button Tests Power button is rendered" time="0.003" file="testApp/powerButton.test.js">
+    </testcase>
+    <testcase classname="Power Button Tests Power button performs exponentiation correctly" name="Power Button Tests Power button performs exponentiation correctly" time="0.003" file="testApp/powerButton.test.js">
+    </testcase>
+    <testcase classname="Power Button Tests Power button handles base to the power of zero" name="Power Button Tests Power button handles base to the power of zero" time="0.005" file="testApp/powerButton.test.js">
+    </testcase>
+    <testcase classname="Power Button Tests Power button handles negative exponent" name="Power Button Tests Power button handles negative exponent" time="0.002" file="testApp/powerButton.test.js">
+    </testcase>
+    <testcase classname="Power Button Tests Power button handles decimal exponent" name="Power Button Tests Power button handles decimal exponent" time="0.002" file="testApp/powerButton.test.js">
+    </testcase>
+    <testcase classname="Power Button Tests Power button handles large numbers" name="Power Button Tests Power button handles large numbers" time="0.002" file="testApp/powerButton.test.js">
+    </testcase>
+    <testcase classname="Power Button Tests Power button shows error for invalid input" name="Power Button Tests Power button shows error for invalid input" time="0.001" file="testApp/powerButton.test.js">
+    </testcase>
+    <testcase classname="Power Button Tests Power button adds entry to history" name="Power Button Tests Power button adds entry to history" time="0.002" file="testApp/powerButton.test.js">
+    </testcase>
+  </testsuite>
+  <testsuite name="Clear All Button Tests" errors="0" failures="0" skipped="0" timestamp="2025-12-04T15:09:34" time="0.088" tests="6">
+    <testcase classname="Clear All Button Tests Clear All button is rendered" name="Clear All Button Tests Clear All button is rendered" time="0.003" file="testApp/clearAllButton.test.js">
+    </testcase>
+    <testcase classname="Clear All Button Tests Clear All button clears input fields" name="Clear All Button Tests Clear All button clears input fields" time="0.002" file="testApp/clearAllButton.test.js">
+    </testcase>
+    <testcase classname="Clear All Button Tests Clear All button clears result" name="Clear All Button Tests Clear All button clears result" time="0.002" file="testApp/clearAllButton.test.js">
+    </testcase>
+    <testcase classname="Clear All Button Tests Clear All button clears history" name="Clear All Button Tests Clear All button clears history" time="0.003" file="testApp/clearAllButton.test.js">
+    </testcase>
+    <testcase classname="Clear All Button Tests Clear All button clears last result" name="Clear All Button Tests Clear All button clears last result" time="0.002" file="testApp/clearAllButton.test.js">
+    </testcase>
+    <testcase classname="Clear All Button Tests Clear All button works after multiple calculations" name="Clear All Button Tests Clear All button works after multiple calculations" time="0.003" file="testApp/clearAllButton.test.js">
+    </testcase>
+  </testsuite>
+  <testsuite name="Multiply Button Tests" errors="0" failures="0" skipped="0" timestamp="2025-12-04T15:09:34" time="0.085" tests="7">
+    <testcase classname="Multiply Button Tests Multiply button is rendered" name="Multiply Button Tests Multiply button is rendered" time="0.003" file="testApp/multiplyButton.test.js">
+    </testcase>
+    <testcase classname="Multiply Button Tests Multiply button performs multiplication correctly" name="Multiply Button Tests Multiply button performs multiplication correctly" time="0.003" file="testApp/multiplyButton.test.js">
+    </testcase>
+    <testcase classname="Multiply Button Tests Multiply button handles zero" name="Multiply Button Tests Multiply button handles zero" time="0.002" file="testApp/multiplyButton.test.js">
+    </testcase>
+    <testcase classname="Multiply Button Tests Multiply button handles negative numbers" name="Multiply Button Tests Multiply button handles negative numbers" time="0.001" file="testApp/multiplyButton.test.js">
+    </testcase>
+    <testcase classname="Multiply Button Tests Multiply button handles decimal numbers" name="Multiply Button Tests Multiply button handles decimal numbers" time="0.004" file="testApp/multiplyButton.test.js">
+    </testcase>
+    <testcase classname="Multiply Button Tests Multiply button shows error for invalid input" name="Multiply Button Tests Multiply button shows error for invalid input" time="0.002" file="testApp/multiplyButton.test.js">
+    </testcase>
+    <testcase classname="Multiply Button Tests Multiply button adds entry to history" name="Multiply Button Tests Multiply button adds entry to history" time="0.001" file="testApp/multiplyButton.test.js">
+    </testcase>
+  </testsuite>
+</testsuites>
