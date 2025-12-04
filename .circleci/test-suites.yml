@@ -18,3 +18,4 @@ outputs:
 options:
   test-impact-analysis: true
   test-analysis-duration: 1
+  full-test-run-paths: []
