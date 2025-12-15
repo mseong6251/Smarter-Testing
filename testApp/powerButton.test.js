@@ -7,7 +7,7 @@ describe("Power Button Tests", () => {
   beforeEach(() => {
     render(<App />);
   });
-
+  //Test
   test("Power button is rendered", () => {
     const powerButton = screen.getByText(/Power \(\^\)/i);
     expect(powerButton).toBeInTheDocument();
