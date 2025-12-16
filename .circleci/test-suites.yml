@@ -14,8 +14,7 @@ analysis: |
        << test.atoms >> \
        && cat "$(dirname << outputs.lcov >>)"/*.info > << outputs.lcov >>
 outputs:
-  junit: reports/test.xml
-  lcov: coverage/coverage.info
+  junit: reports/test-results.xml
 options:
   test-impact-analysis: true
   test-analysis-duration: 1
