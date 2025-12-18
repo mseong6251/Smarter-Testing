@@ -1,5 +1,5 @@
 import { squareRoot } from "../src/squareRoot";
-
+//Test
 describe("Square Root Function Tests", () => {
   test("Square root calculates correctly for perfect squares", () => {
     expect(squareRoot(16)).toBe(4);
@@ -18,7 +18,9 @@ describe("Square Root Function Tests", () => {
   });
 
   test("Square root throws error for negative numbers", () => {
-    expect(() => squareRoot(-4)).toThrow("Cannot calculate square root of negative number");
+    expect(() => squareRoot(-4)).toThrow(
+      "Cannot calculate square root of negative number"
+    );
   });
 
   test("Square root throws error for invalid input", () => {
@@ -29,4 +31,3 @@ describe("Square Root Function Tests", () => {
     expect(squareRoot(10000)).toBe(100);
   });
 });
-
