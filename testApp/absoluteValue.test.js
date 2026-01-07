@@ -1,7 +1,5 @@
 import { absoluteValue } from "../src/absoluteValue";
 
-// Test
-
 describe("Absolute Value Function Tests", () => {
   test("Absolute value returns positive for negative numbers", () => {
     expect(absoluteValue(-5)).toBe(5);
