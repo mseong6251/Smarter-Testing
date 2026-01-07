@@ -67,7 +67,7 @@ jobs:
           path: ./reports/
       - store_artifacts:
           path: ./reports/
-          destination: test-reports
+          destination: test-results
 
 workflows:
   testing:
