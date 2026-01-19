@@ -18,4 +18,5 @@ outputs:
 options:
   test-impact-analysis: true
   test-analysis-duration: 1
+  max-auto-rerun: 3
   full-test-run-paths: []
