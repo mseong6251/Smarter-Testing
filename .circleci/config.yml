@@ -63,7 +63,7 @@ jobs:
           name: Run Jest tests with Smarter Testing
           command: |
             circleci run testsuite "ci tests"
-       - run:
+      - run:
           name: Run Jest tests with Smarter Testing
           command: |
             circleci run testsuite "ci tests"
