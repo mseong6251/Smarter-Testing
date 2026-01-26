@@ -63,16 +63,6 @@ jobs:
           name: Run Jest tests with Smarter Testing 2
           command:
             circleci run testsuite "ci tests"
-      - run:
-          name: Run Jest tests with Smarter Testing 1
-          command:
-            circleci run testsuite "ci tests"
-          when: always
-      - run:
-          name: Run Jest tests with Smarter Testing 1
-          command:
-            echo "hi"
-            
       - store_test_results:
           path: ./reports/
       - store_artifacts:
