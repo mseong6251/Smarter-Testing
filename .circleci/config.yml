@@ -67,6 +67,7 @@ jobs:
           name: Run Jest tests with Smarter Testing 1
           command:
             circleci run testsuite "ci tests"
+          when: always
       - run:
           name: Run Jest tests with Smarter Testing 1
           command:
