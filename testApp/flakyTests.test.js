@@ -3,6 +3,11 @@ import { render, screen, fireEvent, waitFor } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import App from "../src/App";
 
+// Counters to track retry attempts for deterministic flaky tests
+let retryCounter1 = 0; // For test that passes after 1 rerun
+let retryCounter2 = 0; // For test that passes after 2 reruns
+let retryCounter3 = 0; // For test that passes after 3 reruns
+
 describe("Flaky Tests", () => {
   beforeEach(() => {
     render(<App />);
@@ -68,6 +73,30 @@ describe("Flaky Tests", () => {
     
     // This assertion depends on timing of state updates
     expect(secondInput.value).toBe("3");
+  });
+
+  // Test that succeeds after 1 rerun (fails first time, passes second time)
+  test("Test that succeeds after 1 rerun", () => {
+    retryCounter1++;
+    // This test will fail on the first attempt (retryCounter1 = 1)
+    // and pass on the second attempt (retryCounter1 = 2)
+    expect(retryCounter1).toBeGreaterThan(1);
+  });
+
+  // Test that succeeds after 2 reruns (fails first two times, passes third time)
+  test("Test that succeeds after 2 reruns", () => {
+    retryCounter2++;
+    // This test will fail on the first two attempts (retryCounter2 = 1, 2)
+    // and pass on the third attempt (retryCounter2 = 3)
+    expect(retryCounter2).toBeGreaterThan(2);
+  });
+
+  // Test that succeeds after 3 reruns (fails first three times, passes fourth time)
+  test("Test that succeeds after 3 reruns", () => {
+    retryCounter3++;
+    // This test will fail on the first three attempts (retryCounter3 = 1, 2, 3)
+    // and pass on the fourth attempt (retryCounter3 = 4)
+    expect(retryCounter3).toBeGreaterThan(3);
   });
 });
 
