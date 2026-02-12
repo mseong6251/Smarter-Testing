@@ -17,7 +17,7 @@ outputs:
   junit: reports/test-results.xml
 options:
   test-impact-analysis: true
-  test-analysis-duration: 1
+  test-analysis-duration: 5
   max-auto-rerun: 3
   full-test-run-paths: 
       - .circleci/*
